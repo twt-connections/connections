@@ -4,9 +4,9 @@ import { Meteor } from 'meteor/meteor';
 import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import Landing from '../pages/Landing';
+import TopMenu from '../components/TopMenu';
+import FooterMenu from '../components/FooterMenu';
+import Connections from '../pages/Connections';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
@@ -22,9 +22,9 @@ class App extends React.Component {
     return (
         <Router>
           <div>
-            <NavBar/>
+            <TopMenu/>
             <Switch>
-              <Route exact path="/" component={Landing}/>
+              <Route exact path="/" component={Connections}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
@@ -34,7 +34,7 @@ class App extends React.Component {
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
-            <Footer/>
+            <FooterMenu/>
           </div>
         </Router>
     );
