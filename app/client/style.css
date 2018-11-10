@@ -15,3 +15,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.landing-background-image{
+  background: url('https://i0.wp.com/honoluluicc.org/wp-content/uploads/2017/08/uh-manoa-campus-center-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+}
