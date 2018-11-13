@@ -18,7 +18,7 @@ class ListStuff2 extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">User Profiles</Header>
+          <Header as="h2" textAlign="center">Your Connections</Header>
           <Card.Group centered>
             <Card>
               <Card.Content>
@@ -34,12 +34,15 @@ class ListStuff2 extends React.Component {
                 </Card.Description>
               </Card.Content>
               <Card.Content extra>
-                <div className='ui two buttons'>
+                <div className='ui three buttons'>
                   <Button basic color='green'>
                     Request Info
                   </Button>
                   <Button basic color='blue'>
                     Contact
+                  </Button>
+                  <Button basic color='red'>
+                    Remove
                   </Button>
                 </div>
               </Card.Content>
@@ -58,12 +61,15 @@ class ListStuff2 extends React.Component {
                 </Card.Description>
               </Card.Content>
               <Card.Content extra>
-                <div className='ui two buttons'>
+                <div className='ui three buttons'>
                   <Button basic color='green'>
                     Request Info
                   </Button>
                   <Button basic color='blue'>
                     Contact
+                  </Button>
+                  <Button basic color='red'>
+                    Remove
                   </Button>
                 </div>
               </Card.Content>
@@ -82,12 +88,15 @@ class ListStuff2 extends React.Component {
                 </Card.Description>
               </Card.Content>
               <Card.Content extra>
-                <div className='ui two buttons'>
+                <div className='ui three buttons'>
                   <Button basic color='green'>
                     Request Info
                   </Button>
                   <Button basic color='blue'>
                     Contact
+                  </Button>
+                  <Button basic color='red'>
+                    Remove
                   </Button>
                 </div>
               </Card.Content>
