@@ -11,7 +11,6 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '10px' };
     return (
-<<<<<<< HEAD
         <Menu style={menuStyle} attached="top" borderless inverted>
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
             <Header inverted as='h1'>RecruitingGrounds</Header>
@@ -43,7 +42,6 @@ class NavBar extends React.Component {
             )}
           </Menu.Item>
         </Menu>
-=======
       <Menu style={menuStyle} attached="top" borderless inverted color='green'>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Header inverted as='h1'>Recruiting Grounds</Header>
@@ -71,8 +69,7 @@ class NavBar extends React.Component {
             </Dropdown>
           )}
         </Menu.Item>
-      </Menu>
->>>>>>> master
+    </Menu>
     );
   }
 }
