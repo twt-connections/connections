@@ -8,8 +8,13 @@ class Footer extends React.Component {
         <footer>
           <div style={divStyle} className="ui center aligned container">
             <hr />
+<<<<<<< HEAD
             &copy; TWT-Connections <br />
             Honolulu, HI 96822
+=======
+              &copy; TWT-Connections <br />
+              Honolulu, HI 96822
+>>>>>>> master
           </div>
         </footer>
     );
