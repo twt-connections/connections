@@ -12,6 +12,7 @@ import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
+import StudentHome from '../pages/StudentHome';
 import StudentProfile from '../pages/StudentProfile';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -26,7 +27,7 @@ class App extends React.Component {
           <div>
             <NavBar/>
             <Switch>
-              <Route exact path="/" component={Connections}/>
+              <Route exact path="/" component={StudentHome}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
