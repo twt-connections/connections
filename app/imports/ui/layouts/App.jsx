@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar';
 import FooterMenu from '../components/FooterMenu';
 import Connections from '../pages/Connections';
 import CompanyHome from '../pages/CompanyHome';
+import CompanyProfile from '../pages/CompanyProfile';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
@@ -35,6 +36,7 @@ class App extends React.Component {
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/profile" component={StudentProfile}/>
+              <ProtectedRoute path="/company" component={CompanyProfile}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>

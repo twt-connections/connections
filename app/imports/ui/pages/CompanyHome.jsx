@@ -102,6 +102,7 @@ class CompanyHome extends React.Component {
               </Card.Content>
             </Card>
           </Card.Group>
+          <br/>
         </Container>
     );
   }
