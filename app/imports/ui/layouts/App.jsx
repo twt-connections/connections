@@ -8,16 +8,18 @@ import NavBar from '../components/NavBar';
 import FooterMenu from '../components/FooterMenu';
 import Connections from '../pages/Connections';
 import CompanyHome from '../pages/CompanyHome';
+import CompanyProfile from '../pages/CompanyProfile';
 import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import StudentHome from '../pages/StudentHome';
 import StudentProfile from '../pages/StudentProfile';
+import StudentHome from '../pages/StudentHome';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
+import AdminHome from '../pages/AdminHome';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,10 +34,12 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute path="/home" component={CompanyHome}/>
+              <ProtectedRoute path="/studentHome" component={StudentHome}/>
+              <ProtectedRoute path="/companyHome" component={CompanyHome}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/admin" component={AdminHome}/>
               <ProtectedRoute path="/profile" component={StudentProfile}/>
+              <ProtectedRoute path="/company" component={CompanyProfile}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
