@@ -9,7 +9,6 @@ import FooterMenu from '../components/FooterMenu';
 import Connections from '../pages/Connections';
 import CompanyHome from '../pages/CompanyHome';
 import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import StudentProfile from '../pages/StudentProfile';
@@ -17,6 +16,7 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
+import AdminHome from '../pages/AdminHome';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,7 +33,7 @@ class App extends React.Component {
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/home" component={CompanyHome}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/admin" component={AdminHome}/>
               <ProtectedRoute path="/profile" component={StudentProfile}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
