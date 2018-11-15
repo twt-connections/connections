@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stuffs, StuffSchema } from '/imports/api/stuff/stuff';
-import { Header, Card, Image, Container, Button, Icon, Menu, Responsive, Segment, Visibility, Sidebar, Grid } from 'semantic-ui-react';
+import { Header, Image, Container, Button, Segment, Grid } from 'semantic-ui-react';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Meteor } from 'meteor/meteor';
 

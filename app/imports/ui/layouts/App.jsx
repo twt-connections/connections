@@ -13,6 +13,7 @@ import ListStuff from '../pages/ListStuff';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import StudentProfile from '../pages/StudentProfile';
+import StudentHome from '../pages/StudentHome';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -32,7 +33,8 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute path="/home" component={CompanyHome}/>
+              <ProtectedRoute path="/studentHome" component={StudentHome}/>
+              <ProtectedRoute path="/companyHome" component={CompanyHome}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={AdminHome}/>
               <ProtectedRoute path="/profile" component={StudentProfile}/>
