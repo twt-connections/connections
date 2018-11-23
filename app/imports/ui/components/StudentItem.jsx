@@ -1,27 +1,29 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Image, List } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class StudentItem extends React.Component {
   render() {
     return (
-        <Table.Row>
-          <Table.Cell>{this.props.stuff.name}</Table.Cell>
-          <Table.Cell>{this.props.stuff.quantity}</Table.Cell>
-          <Table.Cell>{this.props.stuff.condition}</Table.Cell>
-          <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
-          </Table.Cell>
-        </Table.Row>
+        <List divided verticalAlign='middle' relaxed size={'massive'}>
+          <List.Item>
+            <Image avatar src={this.props.studentitem.image}/>
+            <List.Content>
+              <List.Header as='a'>{this.props.studentitem.firstName} {this.props.studentitem.lastName}</List.Header>
+              <List.Description>{this.props.studentitem.degree}</List.Description>
+              <List.Description>{this.props.studentitem.school}</List.Description>
+            </List.Content>
+          </List.Item>
+        </List>
     );
   }
 }
 
 /** Require a document to be passed to this component. */
 StudentItem.propTypes = {
-  stuff: PropTypes.object.isRequired,
+  studentitem: PropTypes.object.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
