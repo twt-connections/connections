@@ -32,3 +32,5 @@ Meteor.publish('ProfilesAdmin', function publish() {
   }
   return this.ready();
 });
+
+/** TODO: Create subscription for Companies */

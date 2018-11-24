@@ -115,7 +115,7 @@ class CompanyHome extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 CompanyHome.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+  profiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -124,7 +124,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Stuff');
   return {
-    stuffs: Stuffs.find({}).fetch(),
+    profiles: Profiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(CompanyHome);

@@ -29,7 +29,7 @@ class CompanyProfile extends React.Component {
   submit(data) {
     const { name, quantity, condition } = data;
     const owner = Meteor.user().username;
-    Stuffs.insert({ name, quantity, condition, owner }, this.insertCallback);
+    Profiles.insert({ name, quantity, condition, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -44,7 +44,7 @@ class CompanyProfile extends React.Component {
                   fontWeight: 'normal',
                   marginBottom: 0,
                   marginTop: '3em',
-                  textAlign: 'center'
+                  textAlign: 'center',
                 }}
             />
             <Header
@@ -54,11 +54,11 @@ class CompanyProfile extends React.Component {
                   fontSize: '1.7em',
                   fontWeight: 'normal',
                   marginTop: '1.5em',
-                  textAlign: 'center'
+                  textAlign: 'center',
                 }}
             />
 
-            <Segment style={{ padding: '8em 0em'}} vertical>
+            <Segment style={{ padding: '8em 0em' }} vertical>
               <Grid container stackable verticalAlign='middle'>
                 <Grid.Row>
                   <Grid.Column width={8}>
@@ -72,12 +72,14 @@ class CompanyProfile extends React.Component {
                       What we are looking for
                     </Header>
                     <p style={{ fontSize: '1.33em' }}>
-                      Something something we need to hire some people so just send us your resume and we'll hire you.
+                      Something something we need to hire some people so just send us
+                      your resume and we'll hire you.
                     </p>
                   </Grid.Column>
 
                   <Grid.Column floated='right' width={6}>
-                    <Image bordered rounded size='large' src='https://react.semantic-ui.com/images/wireframe/white-image.png'/>
+                    <Image bordered rounded size='large'
+                           src='https://react.semantic-ui.com/images/wireframe/white-image.png'/>
                   </Grid.Column>
                 </Grid.Row>
 
@@ -131,7 +133,7 @@ class CompanyProfile extends React.Component {
               </Grid>
             </Segment>
 
-            <Segment style={{ padding: '8em 0em'}} vertical>
+            <Segment style={{ padding: '8em 0em' }} vertical>
               <Grid container stackable verticalAlign='middle' columns='equal'>
                 <Grid.Row textAlign='center'>
                   <Grid.Column style={{ paddingBottom: '2.5em', paddingTop: '2.5em' }}>

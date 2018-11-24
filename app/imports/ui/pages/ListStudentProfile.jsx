@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
-import { StudentProfiles } from '/imports/api/stuff/StudentProfile';
+import { Profiles } from '/imports/api/profiles/profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import StudentProfile from '/imports/ui/components/StudentProfile';
+import Profile from '/imports/ui/components/Profile';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListStudentProfile extends React.Component {
@@ -20,7 +20,7 @@ class ListStudentProfile extends React.Component {
         <Container>
           <Header as="h2" textAlign="center">Student Profile Page</Header>
           <Card.Group>
-            {this.props.studentprofiles.map((studentprofile, index) => <StudentProfile key={index} studentprofile={studentprofile} />)}
+            {this.props.profiles.map((profile, index) => <Profile key={index} profile={profile} />)}
           </Card.Group>
           <br/>
         </Container>
@@ -39,7 +39,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('StudentProfiles');
   return {
-    studentprofiles: StudentProfiles.find({}).fetch(),
+    studentprofiles: Profiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(ListStudentProfile);

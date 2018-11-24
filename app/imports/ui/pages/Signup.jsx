@@ -35,7 +35,7 @@ export default class Signup extends React.Component {
   }
 
   state = {}
-  handleChange = (e, { value }) => this.setState({ value })
+   handleChange = (e, { value }) => this.setState({ value })
 
 
   /** Display the signup form. */

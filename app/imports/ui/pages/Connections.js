@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Icon, Image } from 'semantic-ui-react';
+import { Grid, Icon } from 'semantic-ui-react';
 
 export default class Connections extends React.Component {
   render() {

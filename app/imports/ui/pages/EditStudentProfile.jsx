@@ -1,11 +1,10 @@
 import React from 'react';
 import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
-import { StudentProfiles, StudentProfileSchema } from '/imports/api/stuff/StudentProfile';
+import { Profiles, ProfileSchema } from '/imports/api/profiles/profile';
 import { Bert } from 'meteor/themeteorchef:bert';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import LongTextField from 'uniforms-semantic/LongTextField';
-import SelectField from 'uniforms-semantic/SelectField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -18,8 +17,10 @@ class EditStudentProfile extends React.Component {
 
   /** On successful submit, insert the data. */
   submit(data) {
-    const { firstName, lastName, image, userName, personalInfo, school, fieldOfStudy, interests, skills, prefLocation, educationLevel, _id } = data;
-    StudentProfiles.update(_id, { $set: { firstName, lastName, image, userName, personalInfo, school, fieldOfStudy, interests, skills, prefLocation, educationLevel } }, (error) => (error ?
+    const { firstName, lastName, image, universityInfo, description, location,
+      skillset, interests, experience, _id } = data;
+    Profiles.update(_id, { $set: { firstName, lastName, image, universityInfo,
+        description, location, skillset, interests, experience } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
@@ -35,22 +36,20 @@ class EditStudentProfile extends React.Component {
         <Grid container centered>
           <Grid.Column>
             <Header as="h2" textAlign="center">Edit Student Profile</Header>
-            <AutoForm schema={StudentProfileSchema} onSubmit={this.submit} model={this.props.doc}>
+            <AutoForm schema={ProfileSchema} onSubmit={this.submit} model={this.props.doc}>
               <Segment>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
-                <TextField name='email'/>
                 <TextField name='image'/>
-                <TextField name='userName'/>
-                <LongTextField name='personalInfo'/>
-                <TextField name='school'/>
-                <TextField name='fieldOfStudy'/>
+                <TextField name='universityInfo'/>
+                <LongTextField name='description'/>
+                <TextField name='location'/>
+                <TextField name='skillset'/>
                 <TextField name='interests'/>
-                <TextField name='skills'/>
-                <TextField name='prefLocation'/>
-                <SelectField name='educationLevel'/>
+                <LongTextField name='experience'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
+                <HiddenField name='owner' />
               </Segment>
             </AutoForm>
           </Grid.Column>
@@ -71,9 +70,9 @@ export default withTracker(({ match }) => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const documentId = match.params._id;
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('StudentProfiles');
+  const subscription = Meteor.subscribe('Profiles');
   return {
-    doc: StudentProfiles.findOne(documentId),
+    doc: Profiles.findOne(documentId),
     ready: subscription.ready(),
   };
 })(EditStudentProfile);

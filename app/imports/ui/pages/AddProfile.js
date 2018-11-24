@@ -35,7 +35,8 @@ class AddProfile extends React.Component {
   submit(data) {
     const { firstName, lastName, universityInfo, description, location, skillset, interests, experience } = data;
     const owner = Meteor.user().username;
-    Profiles.insert({ firstName, lastName, universityInfo, description, location, skillset, interests, experience, owner }, this.insertCallback);
+    Profiles.insert({ firstName, lastName, universityInfo, description, location,
+      skillset, interests, experience, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
