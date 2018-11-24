@@ -12,11 +12,8 @@
   ],
 
   "defaultProfiles": [
-    { "firstName": "Willard", "lastName": "Peralta", "universityInfo": "UH Manoa, BS Computer Science", "description": "Hello my name is Willard Peralta. I am looking for a job please. Thank you.", "location": "Honolulu, HI", "skillset": "Java, C++", "interests": "software engineering, web design",
-    "experience": "Entry-level", "owner": "john@foo.com"},
-    { "firstName": "Ty", "lastName": "Gwartney", "universityInfo": "UH Manoa, BS Computer Science", "description": "Hello my name is Ty Gwartney. I am looking for a job please. Thank you.", "location": "Honolulu, HI", "skillset": "Java, C++", "interests": "software engineering, web design",
-      "experience": "Entry-level", "owner": "john@foo.com"},
-    { "firstName": "Tre", "lastName": "Gelacio", "universityInfo": "UH Manoa, BS Computer Science", "description": "Hello my name is Tre Gelacio. I am looking for a job please. Thank you.", "location": "Honolulu, HI", "skillset": "Java, C++", "interests": "software engineering, web design",
-      "experience": "Entry-level", "owner": "admin@foo.com"}
+    { "image": "", "firstName": "Willard", "lastName": "Peralta", "degree": "BS Computer Science", "school": "UH Manoa"},
+    { "image": "", "firstName": "Ty", "lastName": "Gwartney", "degree": "BS Computer Science", "school": "UH Manoa"},
+    { "image": "", "firstName": "Tre", "lastName": "Gelacio", "degree": "BS Computer Science", "school": "UH Manoa"}
   ]
 }

@@ -7,7 +7,6 @@ import { withRouter } from 'react-router-dom';
 class StudentItem extends React.Component {
   render() {
     return (
-        <List divided verticalAlign='middle' relaxed size={'massive'}>
           <List.Item>
             <Image avatar src={this.props.studentitem.image}/>
             <List.Content>
@@ -16,7 +15,6 @@ class StudentItem extends React.Component {
               <List.Description>{this.props.studentitem.school}</List.Description>
             </List.Content>
           </List.Item>
-        </List>
     );
   }
 }
