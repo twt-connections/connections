@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Container, Form, Grid, Header, Message, Segment, Radio } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 
 /**
@@ -34,6 +34,10 @@ export default class Signup extends React.Component {
     });
   }
 
+  state = {}
+  handleChange = (e, { value }) => this.setState({ value })
+
+
   /** Display the signup form. */
   render() {
     return (
@@ -63,6 +67,28 @@ export default class Signup extends React.Component {
                       type="password"
                       onChange={this.handleChange}
                   />
+                  <Form>
+                    <Form.Field>
+                      <Radio
+                          label='Student'
+                          name='radioGroup'
+                          value='this'
+                          checked={this.state.value === 'this'}
+                          onChange={this.handleChange}
+                      />
+                    </Form.Field>
+                    <Form.Field>
+                      <Radio
+                          label='Company'
+                          name='radioGroup'
+                          value='that'
+                          checked={this.state.value === 'that'}
+                          onChange={this.handleChange}
+                      />
+                    </Form.Field>
+                  </Form>
+
+
                   <Form.Button content="Submit"/>
                 </Segment>
               </Form>

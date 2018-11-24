@@ -1,8 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Button, Image, Loader } from 'semantic-ui-react';
-import { Stuffs } from '/imports/api/stuff/stuff';
-import StuffItem from '/imports/ui/components/StuffItem';
+import { Profiles } from '/imports/api/profiles/profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -19,7 +18,7 @@ class CompanyHome extends React.Component {
     return (
         <div className="landing-background-image">
           <Container>
-            <Header as="h2" textAlign="center">Your Connections</Header>
+            <Header as="h2" textAlign="center">Recruiters</Header>
             <Card.Group centered>
               <Card>
                 <Card.Content>

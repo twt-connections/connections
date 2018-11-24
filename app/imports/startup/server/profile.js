@@ -1,34 +1,34 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
-import { Stuffs } from '../../api/stuff/stuff.js';
+import { Profiles } from '../../api/profiles/profile.js';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
-  Stuffs.insert(data);
+  console.log(`  Adding: ${data.lastName} (${data.owner})`);
+  Profiles.insert(data);
 }
 
 /** Initialize the collection if empty. */
-if (Stuffs.find().count() === 0) {
-  if (Meteor.settings.defaultData) {
+if (Profiles.find().count() === 0) {
+  if (Meteor.settings.defaultProfiles) {
     console.log('Creating default data.');
-    Meteor.settings.defaultData.map(data => addData(data));
+    Meteor.settings.defaultProfiles.map(data => addData(data));
   }
 }
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Stuff', function publish() {
+Meteor.publish('Profiles', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
-    return Stuffs.find({ owner: username });
+    return Profiles.find({ owner: username });
   }
   return this.ready();
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('StuffAdmin', function publish() {
+Meteor.publish('ProfilesAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Stuffs.find();
+    return Profiles.find();
   }
   return this.ready();
 });
