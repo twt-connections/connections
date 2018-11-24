@@ -6,7 +6,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListStuff extends React.Component {
+class AllStudentProfiles extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -76,8 +76,8 @@ class ListStuff extends React.Component {
   }
 }
 /** Require an array of Stuff documents in the props. */
-ListStuff.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+AllStudentProfiles.propTypes = {
+  profiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -86,7 +86,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Stuff');
   return {
-    stuffs: Stuffs.find({}).fetch(),
+    profiles: Profiles.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListStuff);
+})(AllStudentProfiles);
