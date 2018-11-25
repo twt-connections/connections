@@ -10,7 +10,7 @@ import Connections from '../pages/Connections';
 import AllStudentProfiles from '../pages/AllStudentProfiles';
 import CompanyHome from '../pages/CompanyHome';
 import CompanyProfile from '../pages/CompanyProfile';
-import ListStuff from '../pages/ListStuff';
+import BrowseListings from '../pages/BrowseListings';
 import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import StudentHome from '../pages/StudentHome';
@@ -32,7 +32,7 @@ class App extends React.Component {
               <Route exact path="/" component={Connections}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
-              <ProtectedRoute path="/list" component={ListStuff}/>
+              <ProtectedRoute path="/browselistings" component={BrowseListings}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/studentHome" component={StudentHome}/>
               <ProtectedRoute path="/companyHome" component={CompanyHome}/>
