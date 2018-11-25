@@ -16,11 +16,6 @@ class NavBar extends React.Component {
             <Header inverted as='h1'>Recruiting Grounds</Header>
           </Menu.Item>
           {this.props.currentUser ? (
-              [<Menu.Item as={NavLink} activeClassName="active" exact to="/studentHome" key='studentHome'>Student Home</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/companyHome" key='companyHome'>Company Home</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/AllStudentProfiles" key='AllStudentProfiles'>Browse Profiles</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/browseListings" key='browseListings'>Browse Listings</Menu.Item>]
-
               [<Menu.Item as={NavLink} activeClassName="active" exact to="/studentHome" key='studentHome'>
                   Student Home
                 </Menu.Item>,

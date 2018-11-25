@@ -12,7 +12,6 @@ class CompanyItem extends React.Component {
             <Image floated='right' size='mini' src={this.props.companyItem.image} />
             <Card.Header>
               {this.props.companyItem.name}
-              </Card.Header>
             </Card.Header>
             <Card.Meta>
               {this.props.companyItem.location}
