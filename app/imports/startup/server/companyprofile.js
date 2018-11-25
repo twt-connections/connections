@@ -19,8 +19,8 @@ if (CompanyProfiles.find().count() === 0) {
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('CompanyProfiles', function publish() {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).name;
-    return CompanyProfiles.find({ owner: name });
+    const username = Meteor.users.findOne(this.userId).username;
+    return CompanyProfiles.find({ owner: username });
   }
   return this.ready();
 });

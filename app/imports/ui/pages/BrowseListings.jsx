@@ -1,12 +1,12 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
-import { Stuffs } from '/imports/api/stuff/stuff';
-import StuffItem from '/imports/ui/components/StuffItem';
+import { Container, Card, Header, Loader } from 'semantic-ui-react';
+import { CompanyProfiles } from '/imports/api/profiles/CompanyProfile.js';
+import CompanyItem from '/imports/ui/components/CompanyItem';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders a table containing all of the CompanyProfiles documents. Use <CompanyItem> to render each row. */
 class BrowseListings extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
@@ -17,28 +17,27 @@ class BrowseListings extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Card.Group>
-          <Card>
-            <Card.Content>
-
-            </Card.Content>
-          </Card>
-        </Card.Group>
+        <Container>
+          <Header as="h2" textAlign="center">Browse Listings</Header>
+          <Card.Group>
+            {this.props.companyProfiles.map((companyProfile, index) => <CompanyItem key={index} companyItem={companyProfile} />)}
+          </Card.Group>
+        </Container>
     );
   }
 }
-/** Require an array of Stuff documents in the props. */
+/** Require an array of CompanyProfiles documents in the props. */
 BrowseListings.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+  companyProfiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Stuff');
+  // Get access to CompanyProfiles documents.
+  const subscription = Meteor.subscribe('CompanyProfiles');
   return {
-    stuffs: Stuffs.find({}).fetch(),
+    companyProfiles: CompanyProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(BrowseListings);

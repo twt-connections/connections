@@ -3,7 +3,7 @@ import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
-/** Renders a single row in the Browse Listings table. See pages/BrowseListings.jsx. */
+/** Renders a single card in the Browse Listings page. See pages/BrowseListings.jsx. */
 class CompanyItem extends React.Component {
   render() {
     return (
@@ -18,6 +18,8 @@ class CompanyItem extends React.Component {
             </Card.Meta>
             <Card.Description>
               {this.props.companyItem.description}
+              <br />
+              {this.props.companyItem.owner}
             </Card.Description>
           </Card.Content>
         </Card>

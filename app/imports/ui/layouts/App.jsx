@@ -32,11 +32,11 @@ class App extends React.Component {
               <Route exact path="/" component={Connections}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
-              <ProtectedRoute path="/browselistings" component={BrowseListings}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/studentHome" component={StudentHome}/>
               <ProtectedRoute path="/companyHome" component={CompanyHome}/>
               <ProtectedRoute path="/allStudentProfiles" component={AllStudentProfiles}/>
+              <ProtectedRoute path="/browseListings" component={BrowseListings}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={AdminHome}/>
               <ProtectedRoute path="/profile" component={StudentProfile}/>
