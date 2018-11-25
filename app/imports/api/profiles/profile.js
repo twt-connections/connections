@@ -7,14 +7,16 @@ const Profiles = new Mongo.Collection('Profiles');
 
 /** Create a schema to constrain the structure of documents associated with this collection. */
 const ProfileSchema = new SimpleSchema({
-firstName: String,
-lastName: String,
-universityInfo: String,
-description: String,
-location: String,
-skillset: String,
-interests: String,
-experience: String,
+  firstName: String,
+  lastName: String,
+  image: String,
+  universityInfo: String,
+  description: String,
+  location: String,
+  skillset: String,
+  interests: String,
+  experience: String,
+  owner: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

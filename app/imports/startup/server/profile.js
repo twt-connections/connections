@@ -11,7 +11,7 @@ function addData(data) {
 /** Initialize the collection if empty. */
 if (Profiles.find().count() === 0) {
   if (Meteor.settings.defaultProfiles) {
-    console.log('Creating default data.');
+    console.log('Creating default profiles.');
     Meteor.settings.defaultProfiles.map(data => addData(data));
   }
 }
@@ -26,9 +26,11 @@ Meteor.publish('Profiles', function publish() {
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('ProfilesAdmin', function publish() {
+Meteor.publish('Admin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Profiles.find();
   }
   return this.ready();
 });
+
+/** TODO: Create subscription for Companies */

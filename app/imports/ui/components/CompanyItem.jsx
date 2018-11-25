@@ -13,6 +13,7 @@ class CompanyItem extends React.Component {
             <Card.Header>
               {this.props.companyItem.name}
               </Card.Header>
+            </Card.Header>
             <Card.Meta>
               {this.props.companyItem.location}
             </Card.Meta>
