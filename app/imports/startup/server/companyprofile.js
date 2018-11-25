@@ -1,36 +1,34 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
-import { Profiles } from '../../api/profiles/profile.js';
+import { CompanyProfiles } from '../../api/profiles/CompanyProfile.js';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  console.log(`  Adding: ${data.lastName} (${data.owner})`);
-  Profiles.insert(data);
+  console.log(`  Adding: ${data.name} (${data.owner})`);
+  CompanyProfiles.insert(data);
 }
 
 /** Initialize the collection if empty. */
-if (Profiles.find().count() === 0) {
-  if (Meteor.settings.defaultProfiles) {
-    console.log('Creating default profiles.');
-    Meteor.settings.defaultProfiles.map(data => addData(data));
+if (CompanyProfiles.find().count() === 0) {
+  if (Meteor.settings.defaultData) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultCompanyProfiles.map(data => addData(data));
   }
 }
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Profiles', function publish() {
+Meteor.publish('CompanyProfiles', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
-    return Profiles.find({ owner: username });
+    return CompanyProfiles.find({ owner: username });
   }
   return this.ready();
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('Admin', function publish() {
+Meteor.publish('CompanyProfilesAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Profiles.find();
+    return CompanyProfiles.find();
   }
   return this.ready();
 });
-
-/** TODO: Create subscription for Companies */

@@ -32,9 +32,9 @@ class Profile extends React.Component {
             <Card.Description>
               {this.props.profile.experience}
             </Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            <Link to={`/edit/${this.props.profile._id}`}>Edit</Link>
+            <Card.Content extra>
+              <Link to={`/editStudentProfile/${this.props.profile._id}`}>Click to Edit</Link>
+            </Card.Content>
           </Card.Content>
         </Card>
     );
