@@ -26,7 +26,8 @@ class CompanyHome extends React.Component {
                   <Card.Header>Melon Tusk</Card.Header>
                   <Card.Meta>Apple Motors</Card.Meta>
                   <Card.Description>
-                    Seeking recent graduates in computer science looking for an entry level position. Training period is provided. <br/>
+                    Seeking recent graduates in computer science looking for an entry
+                    level position. Training period is provided. <br/>
                     <b>Location</b>: Honolulu, HI <br/>
                     <b>Required Skills</b>: Java, C++ <br/>
                     <b>Desirable Skills</b>: Software Engineering, Web Design <br/>
