@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Loader } from 'semantic-ui-react';
-import { StudentProfiles } from '/imports/api/profiles/StudentProfile';
+import { StudentProfiles } from '/imports/api/profiles/StudentProfile.js';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import StudentItem from '/imports/ui/components/StudentItem';
@@ -36,7 +36,7 @@ BrowseProfiles.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Profiles');
+  const subscription = Meteor.subscribe('StudentProfiles');
   return {
     studentProfiles: StudentProfiles.find({}).fetch(),
     ready: subscription.ready(),
