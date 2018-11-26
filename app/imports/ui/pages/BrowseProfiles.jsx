@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Loader } from 'semantic-ui-react';
-import { Profiles } from '/imports/api/profiles/profile';
+import { StudentProfiles } from '/imports/api/profiles/StudentProfile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import StudentItem from '/imports/ui/components/StudentItem';
@@ -20,7 +20,7 @@ class BrowseProfiles extends React.Component {
         <Container>
           <Header as="h2" textAlign="center">Browse Listings</Header>
           <Card.Group>
-            {this.props.students.map((student, index) => <StudentItem key={index} student={student}/>)}
+            {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} student={studentProfile}/>)}
           </Card.Group>
         </Container>
     );
@@ -29,7 +29,7 @@ class BrowseProfiles extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 BrowseProfiles.propTypes = {
-  students: PropTypes.array.isRequired,
+  studentProfiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -38,7 +38,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Profiles');
   return {
-    students: Profiles.find({}).fetch(),
+    studentProfiles: StudentProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(BrowseProfiles);

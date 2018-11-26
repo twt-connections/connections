@@ -11,7 +11,7 @@ image: String,
 firstName: String,
 lastName: String,
 degree: String,
-school: String,
+school: String, owner: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
