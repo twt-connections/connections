@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader, List, Image } from 'semantic-ui-react';
+import { Container, Card, Header, Loader } from 'semantic-ui-react';
 import { Profiles } from '/imports/api/profiles/profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -18,70 +18,10 @@ class BrowseProfiles extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">Student Profiles</Header>
-          <Table celled>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell></Table.HeaderCell>
-                <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Degree</Table.HeaderCell>
-                <Table.HeaderCell>School</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-            </Table.Body>
-          </Table>
-          <List divided verticalAlign='middle' relaxed size={'massive'}>
+          <Header as="h2" textAlign="center">Browse Listings</Header>
+          <Card.Group>
             {this.props.students.map((student, index) => <StudentItem key={index} student={student}/>)}
-            <List.Item>
-              <Image avatar src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'/>
-              <List.Content>
-                <List.Header as='a'>Steve Sanders</List.Header>
-                <List.Description>BS Computer Science</List.Description>
-                <List.Description>UH Manoa</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <Image avatar src='https://react.semantic-ui.com/images/avatar/large/jenny.jpg'/>
-              <List.Content>
-                <List.Header as='a'>Molly Thomas</List.Header>
-                <List.Description>BA Computer Science</List.Description>
-                <List.Description>UH Manoa</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <Image avatar src='https://react.semantic-ui.com/images/avatar/large/veronika.jpg'/>
-              <List.Content>
-                <List.Header as='a'>Elliot Baker</List.Header>
-                <List.Description>BS Chemistry</List.Description>
-                <List.Description>UH Manoa</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <Image avatar src='https://react.semantic-ui.com/images/avatar/large/jenny.jpg'/>
-              <List.Content>
-                <List.Header as='a'>Lindsay Stevenson</List.Header>
-                <List.Description>BA Computer Science</List.Description>
-                <List.Description>UH Manoa</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <Image avatar src='https://react.semantic-ui.com/images/avatar/large/veronika.jpg'/>
-              <List.Content>
-                <List.Header as='a'>Veronika Ossi</List.Header>
-                <List.Description>BS Computer Science</List.Description>
-                <List.Description>UH Manoa</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <Image avatar src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'/>
-              <List.Content>
-                <List.Header as='a'>Matthew Gray</List.Header>
-                <List.Description>BA Computer Science</List.Description>
-                <List.Description>UH Manoa</List.Description>
-              </List.Content>
-            </List.Item>
-          </List>
+          </Card.Group>
         </Container>
     );
   }
