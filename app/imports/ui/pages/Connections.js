@@ -1,8 +1,5 @@
 import React from 'react';
-import Logo from '../components/Logo';
-import MiddleMenu from '../components/MiddleMenu';
-import FullWidthImage from '../components/FullWidthImage';
-import { Grid, Header, Icon, Image } from 'semantic-ui-react';
+import { Grid, Icon } from 'semantic-ui-react';
 
 export default class Connections extends React.Component {
   render() {

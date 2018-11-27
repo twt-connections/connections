@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Table, Loader, Label, Menu, Icon } from 'semantic-ui-react';
-import { Stuffs } from '/imports/api/stuff/stuff';
-// import StuffItem from '/imports/ui/components/StuffItem';
+import { Container, Header, Table, Loader, Menu, Icon } from 'semantic-ui-react';
+import { Profiles } from '/imports/api/profiles/profile';
+import Profile from '/imports/ui/components/Profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -72,7 +72,7 @@ class AdminHome extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 AdminHome.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+  profiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -81,7 +81,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Stuff');
   return {
-    stuffs: Stuffs.find({}).fetch(),
+    profiles: Profiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(AdminHome);

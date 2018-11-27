@@ -15,5 +15,10 @@
     { "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg", "firstName": "Willard", "lastName": "Peralta", "degree": "BS Computer Science", "school": "UH Manoa", "owner": "john@foo.com"},
     { "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg", "firstName": "Ty", "lastName": "Gwartney", "degree": "BS Computer Science", "school": "UH Manoa", "owner": "john@foo.com"},
     { "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg", "firstName": "Tre", "lastName": "Gelacio", "degree": "BS Computer Science", "school": "UH Manoa", "owner": "admin@foo.com"}
+    ],
+
+  "defaultCompanyProfiles": [
+    { "name": "Strawberry", "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg", "location": "Honolulu, HI", "description": "New company", "owner": "john@foo.com" }
   ]
+
 }

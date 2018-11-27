@@ -3,22 +3,19 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /** Create a Meteor collection. */
-const Stuffs = new Mongo.Collection('Stuffs');
+const CompanyProfiles = new Mongo.Collection('CompanyProfiles');
 
 /** Create a schema to constrain the structure of documents associated with this collection. */
-const StuffSchema = new SimpleSchema({
+const CompanyProfileSchema = new SimpleSchema({
   name: String,
-  quantity: Number,
+  image: String,
+  location: String,
+  description: String,
   owner: String,
-  condition: {
-    type: String,
-    allowedValues: ['excellent', 'good', 'fair', 'poor'],
-    defaultValue: 'good',
-  },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
-Stuffs.attachSchema(StuffSchema);
+CompanyProfiles.attachSchema(CompanyProfileSchema);
 
 /** Make the collection and schema available to other code. */
-export { Stuffs, StuffSchema };
+export { CompanyProfiles, CompanyProfileSchema };
