@@ -17,7 +17,7 @@ if (StudentProfiles.find().count() === 0) {
 }
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Profiles', function publish() {
+Meteor.publish('StudentProfiles', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return StudentProfiles.find({ owner: username });
