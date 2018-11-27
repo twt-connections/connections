@@ -1,5 +1,5 @@
 import React from 'react';
-import { Profiles, ProfileSchema } from '/imports/api/profiles/profile';
+import { CompanyProfiles, CompanyProfileSchema } from '/imports/api/profiles/CompanyProfile';
 import { Header, Image, Container, Button, Segment, Grid } from 'semantic-ui-react';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Meteor } from 'meteor/meteor';
@@ -27,9 +27,9 @@ class CompanyProfile extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { name, quantity, condition } = data;
+    const { name, image, slogan, location, description } = data;
     const owner = Meteor.user().username;
-    Profiles.insert({ name, quantity, condition, owner }, this.insertCallback);
+    CompanyProfiles.insert({ name, image, slogan, location, description, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
