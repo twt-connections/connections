@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
-import { Profiles, ProfileSchema } from '/imports/api/profiles/profile';
+import { StudentProfiles, StudentProfileSchema } from '/imports/api/profiles/profile';
 import { Bert } from 'meteor/themeteorchef:bert';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
@@ -19,7 +19,7 @@ class EditStudentProfile extends React.Component {
   submit(data) {
     const { firstName, lastName, image, universityInfo, description, location,
       skillset, interests, experience, _id } = data;
-    Profiles.update(_id, { $set: { firstName, lastName, image, universityInfo,
+    StudentProfiles.update(_id, { $set: { firstName, lastName, image, universityInfo,
         description, location, skillset, interests, experience } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
@@ -36,7 +36,7 @@ class EditStudentProfile extends React.Component {
         <Grid container centered>
           <Grid.Column>
             <Header as="h2" textAlign="center">Edit Student Profile</Header>
-            <AutoForm schema={ProfileSchema} onSubmit={this.submit} model={this.props.doc}>
+            <AutoForm schema={StudentProfileSchema} onSubmit={this.submit} model={this.props.doc}>
               <Segment>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
@@ -72,7 +72,7 @@ export default withTracker(({ match }) => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('Profiles');
   return {
-    doc: Profiles.findOne(documentId),
+    doc: StudentProfiles.findOne(documentId),
     ready: subscription.ready(),
   };
 })(EditStudentProfile);
