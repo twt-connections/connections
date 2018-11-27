@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Button, Image, Loader } from 'semantic-ui-react';
-import { Profiles } from '/imports/api/profiles/profile';
+import { CompanyProfiles } from '/imports/api/profiles/CompanyProfile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -122,9 +122,9 @@ CompanyHome.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Profile documents.
-  const subscription = Meteor.subscribe('Profiles');
+  const subscription = Meteor.subscribe('CompanyProfiles');
   return {
-    profiles: Profiles.find({}).fetch(),
+    profiles: CompanyProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(CompanyHome);

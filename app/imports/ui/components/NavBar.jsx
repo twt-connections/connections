@@ -22,10 +22,6 @@ class NavBar extends React.Component {
                   Home</Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/browseProfiles" key='browseProfiles'>Browse
                   Profiles</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/allStudentProfiles"
-                           key='allStudentProfiles'>
-                  Browse Profiles
-                </Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/browseListings" key='browseListings'>
                   Browse Listings
                 </Menu.Item>]

@@ -1,2 +1,2 @@
-import './StudentProfile.js';
+import './profile.js';
 import './CompanyProfile.js';
