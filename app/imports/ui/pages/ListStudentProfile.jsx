@@ -20,9 +20,9 @@ class ListStudentProfile extends React.Component {
         <div className="landing-background-image">
           <Container>
             <Header as="h2" textAlign="center">Student Profile Page</Header>
-              <Card>
+              <Card.Group>
                 {this.props.profiles.map((profile) => <Profile key={profile._id} profile={profile} />)}
-              </Card>
+              </Card.Group>
             <br/>
           </Container>
         </div>

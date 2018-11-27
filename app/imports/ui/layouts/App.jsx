@@ -10,7 +10,9 @@ import Connections from '../pages/Connections';
 import AllStudentProfiles from '../pages/AllStudentProfiles';
 import CompanyHome from '../pages/CompanyHome';
 import CompanyProfile from '../pages/CompanyProfile';
+import EditCompanyProfile from '../pages/EditCompanyProfile';
 import AddProfile from '../pages/AddProfile';
+import AddCompanyProfile from '../pages/AddCompanyProfile';
 import BrowseListings from '../pages/BrowseListings';
 import StudentHome from '../pages/StudentHome';
 import StudentProfile from '../pages/ListStudentProfile';
@@ -37,7 +39,9 @@ class App extends React.Component {
               <ProtectedRoute path="/allStudentProfiles" component={AllStudentProfiles}/>
               <ProtectedRoute path="/browseListings" component={BrowseListings}/>
               <ProtectedRoute path="/addProfile" component={AddProfile}/>
+              <ProtectedRoute path="/addCompanyProfile" component={AddCompanyProfile}/>
               <ProtectedRoute path="/editStudentProfile/:_id" component={EditStudentProfile}/>
+              <ProtectedRoute path="/editCompanyProfile/:_id" component={EditCompanyProfile}/>
               <AdminProtectedRoute path="/admin" component={AdminHome}/>
               <ProtectedRoute path="/profile" component={StudentProfile}/>
               <ProtectedRoute path="/company" component={CompanyProfile}/>
