@@ -12,7 +12,7 @@ function addData(data) {
 if (StudentProfiles.find().count() === 0) {
   if (Meteor.settings.defaultData) {
     console.log('Creating default data.');
-    Meteor.settings.defaultProfiles.map(data => addData(data));
+    Meteor.settings.defaultStudentProfiles.map(data => addData(data));
   }
 }
 
@@ -26,7 +26,7 @@ Meteor.publish('StudentProfiles', function publish() {
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('ProfilesAdmin', function publish() {
+Meteor.publish('StudentProfilesAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return StudentProfiles.find();
   }
