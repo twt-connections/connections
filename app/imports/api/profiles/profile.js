@@ -3,24 +3,20 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /** Create a Meteor collection. */
-const Profiles = new Mongo.Collection('Profiles');
+const StudentProfiles = new Mongo.Collection('StudentProfiles');
 
 /** Create a schema to constrain the structure of documents associated with this collection. */
-const ProfileSchema = new SimpleSchema({
+const StudentProfileSchema = new SimpleSchema({
+  image: String,
   firstName: String,
   lastName: String,
-  image: String,
-  universityInfo: String,
-  description: String,
-  location: String,
-  skillset: String,
-  interests: String,
-  experience: String,
+  degree: String,
+  school: String,
   owner: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
-Profiles.attachSchema(ProfileSchema);
+StudentProfiles.attachSchema(StudentProfileSchema);
 
 /** Make the collection and schema available to other code. */
-export { Profiles, ProfileSchema };
+export { StudentProfiles, StudentProfileSchema };

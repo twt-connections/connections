@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, List, Image } from 'semantic-ui-react';
-import { Profiles } from '/imports/api/profiles/profile';
+import { StudentProfiles } from '/imports/api/profiles/profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -84,9 +84,9 @@ AllStudentProfiles.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Profile documents.
-  const subscription = Meteor.subscribe('Profiles');
+  const subscription = Meteor.subscribe('StudentProfiles');
   return {
-    profiles: Profiles.find({}).fetch(),
+    profiles: StudentProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(AllStudentProfiles);
