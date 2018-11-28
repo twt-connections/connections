@@ -9,7 +9,7 @@ class StudentItem extends React.Component {
     return (
         <Card>
           <Card.Content>
-            <Image floated='right' size='mini' src={this.props.studentItem.image} />
+            <Image floated='right' size='mini' src={this.props.studentProfiles.image} />
             <Card.Header>
               {this.props.studentItem.firstName} {this.props.studentItem.lastName}
             </Card.Header>
@@ -29,7 +29,7 @@ class StudentItem extends React.Component {
 
 /** Require a document to be passed to this component. */
 StudentItem.propTypes = {
-  studentItem: PropTypes.object.isRequired,
+  studentProfiles: PropTypes.object.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */

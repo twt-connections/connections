@@ -1,3 +1,3 @@
 import './accounts.js';
-//import './studentprofile.js';
+import './profile.js';
 import './companyprofile.js';
