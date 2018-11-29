@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Loader } from 'semantic-ui-react';
-import { CompanyProfiles } from '/imports/api/profiles/CompanyProfile.js';
+import { CompanyProfiles } from '/imports/api/profiles/CompanyProfile';
 import CompanyItem from '/imports/ui/components/CompanyItem';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -26,6 +26,7 @@ class BrowseListings extends React.Component {
     );
   }
 }
+
 /** Require an array of CompanyProfiles documents in the props. */
 BrowseListings.propTypes = {
   companyProfiles: PropTypes.array.isRequired,

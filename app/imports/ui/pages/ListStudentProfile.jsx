@@ -20,7 +20,8 @@ class ListStudentProfile extends React.Component {
         <div className="landing-background-image">
           <Container>
             <Header as="h2" textAlign="center">Student Profile Page</Header>
-              <Card.Group>
+              <br/>
+              <Card.Group centered>
                 {this.props.profiles.map((profile) => <Profile key={profile._id} profile={profile} />)}
               </Card.Group>
             <br/>
@@ -30,7 +31,7 @@ class ListStudentProfile extends React.Component {
   }
 }
 
-/** Require an array of Stuff documents in the props. */
+/** Require an array of StudentProfile documents in the props. */
 ListStudentProfile.propTypes = {
   profiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,

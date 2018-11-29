@@ -20,7 +20,9 @@ class CompanyProfile extends React.Component {
         <div className="landing-background-image">
           <Container>
             <Header as="h2" textAlign="center">Company Profile Page</Header>
-            
+              <Card.Group>
+                {this.props.companyprofiles.map((companyprofile) => <CompanyItem key={companyprofile._id} companyprofile={companyprofile} />)}
+              </Card.Group>
             <br/>
           </Container>
         </div>
