@@ -26,7 +26,7 @@ class BrowseProfiles extends React.Component {
     );
   }
 }
-
+ //test
 /** Require an array of Stuff documents in the props. */
 BrowseProfiles.propTypes = {
   studentProfiles: PropTypes.array.isRequired,
