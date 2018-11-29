@@ -20,13 +20,12 @@ class BrowseProfiles extends React.Component {
         <Container>
           <Header as="h2" textAlign="center">Browse Listings</Header>
           <Card.Group>
-            {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} student={studentProfile}/>)}
+            {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} studentItem={studentProfile}/>)}
           </Card.Group>
         </Container>
     );
   }
 }
- //test
 /** Require an array of Stuff documents in the props. */
 BrowseProfiles.propTypes = {
   studentProfiles: PropTypes.array.isRequired,
