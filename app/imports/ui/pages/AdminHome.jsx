@@ -2,7 +2,7 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Table, Loader, Menu, Icon } from 'semantic-ui-react';
 import { Profiles } from '/imports/api/profiles/profile';
-import Profile from '/imports/ui/components/Profile';
+//import Profile from '/imports/ui/components/Profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -79,7 +79,7 @@ AdminHome.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Stuff');
+  const subscription = Meteor.subscribe('Profiles');
   return {
     profiles: Profiles.find({}).fetch(),
     ready: subscription.ready(),

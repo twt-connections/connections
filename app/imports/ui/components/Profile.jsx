@@ -8,35 +8,47 @@ class Profile extends React.Component {
 
   render() {
     return (
-        <Card centered>
-          <Card.Content>
-            <Image floated='right' size='mini' src={this.props.profile.image} />
-            <Card.Header>
-              {this.props.profile.firstName} {this.props.profile.lastName}
-            </Card.Header>
-            <Card.Description>
-              {this.props.profile.universityInfo}
-            </Card.Description>
-            <Card.Description>
-              {this.props.profile.description}
-            </Card.Description>
-            <Card.Description>
-              {this.props.profile.location}
-            </Card.Description>
-            <Card.Description>
-              {this.props.profile.skillset}
-            </Card.Description>
-            <Card.Description>
-              {this.props.profile.interests}
-            </Card.Description>
-            <Card.Description>
-              {this.props.profile.experience}
-            </Card.Description>
+        <Card.Group centered>
+          <Card centered>
+            <Card.Content>
+              <Image floated='right' size='mini' src={this.props.profile.image} />
+              <Card.Header>
+                {this.props.profile.firstName} {this.props.profile.lastName}
+              </Card.Header>
+              <Card.Description>
+                {this.props.profile.universityInfo}
+              </Card.Description>
+              <Card.Description>
+                {this.props.profile.location}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+
+          <Card>
+            <Card.Content>
+              <Card.Description>
+                {this.props.profile.description}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+
+          <Card>
+            <Card.Content>
+              <Card.Description>
+                {this.props.profile.skillset}
+              </Card.Description>
+              <Card.Description>
+                {this.props.profile.interests}
+              </Card.Description>
+              <Card.Description>
+                {this.props.profile.experience}
+              </Card.Description>
+            </Card.Content>
             <Card.Content extra>
               <Link to={`/editStudentProfile/${this.props.profile._id}`}>Click to Edit</Link>
             </Card.Content>
-          </Card.Content>
-        </Card>
+          </Card>
+        </Card.Group>
     );
   }
 }

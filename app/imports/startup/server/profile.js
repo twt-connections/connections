@@ -6,6 +6,8 @@ import { StudentProfiles } from '../../api/profiles/profile';
 function addData(data) {
   console.log(`  Adding: ${data.lastName} (${data.owner})`);
   StudentProfiles.insert(data);
+  console.log(`  Adding: ${data.name} (${data.owner})`);
+  Profiles.insert(data);
 }
 
 /** Initialize the collection if empty. */
