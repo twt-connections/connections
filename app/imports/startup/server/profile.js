@@ -1,13 +1,11 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
-import { StudentProfiles } from '../../api/profiles/profile';
+import { StudentProfiles } from '../../api/profiles/profile.js';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  console.log(`  Adding: ${data.lastName} (${data.owner})`);
-  StudentProfiles.insert(data);
   console.log(`  Adding: ${data.name} (${data.owner})`);
-  Profiles.insert(data);
+  StudentProfiles.insert(data);
 }
 
 /** Initialize the collection if empty. */
@@ -28,11 +26,9 @@ Meteor.publish('StudentProfiles', function publish() {
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('Admin', function publish() {
+Meteor.publish('StudentProfilesAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return StudentProfiles.find();
   }
   return this.ready();
 });
-
-/** TODO: Create subscription for Companies */

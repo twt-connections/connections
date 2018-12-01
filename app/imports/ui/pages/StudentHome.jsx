@@ -113,7 +113,7 @@ class StudentHome extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 StudentHome.propTypes = {
-  profiles: PropTypes.array.isRequired,
+  studentProfiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -122,7 +122,7 @@ export default withTracker(() => {
   // Get access to Profile documents.
   const subscription = Meteor.subscribe('StudentProfiles');
   return {
-    profiles: StudentProfiles.find({}).fetch(),
+    studentProfiles: StudentProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(StudentHome);
