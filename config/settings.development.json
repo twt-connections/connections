@@ -5,46 +5,164 @@
     { "email": "john@foo.com", "password": "changeme" }
 
   ],
-  "defaultData": [
-    {
-      "name": "Basket",
-      "quantity": 3,
-      "owner": "john@foo.com",
-      "condition": "excellent"
-    },
-    {
-      "name": "Bicycle",
-      "quantity": 2,
-      "owner": "john@foo.com",
-      "condition": "poor"
-    },
-    {
-      "name": "Banana",
-      "quantity": 2,
-      "owner": "admin@foo.com",
-      "condition": "good"
-    },
-    {
-      "name": "Boogie Board",
-      "quantity": 2,
-      "owner": "admin@foo.com",
-      "condition": "excellent"
-    }
-  ],
 
   "defaultStudentProfiles": [
     {
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "image": "https://react.semantic-ui.com/images/avatar/large/steve.jpg",
       "firstName": "Willard",
       "lastName": "Peralta",
+      "school": "UH Manoa",
+      "degree": "BS Computer Science",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/elliot.jpg",
+      "firstName": "Ty",
+      "lastName": "Gwartney",
       "degree": "BS Computer Science",
       "school": "UH Manoa",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/steve.jpg",
+      "firstName": "Tre",
+      "lastName": "Gelacio",
+      "degree": "BS Computer Science",
+      "school": "UH Manoa",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
+      "firstName": "Linda",
+      "lastName": "Notgates",
+      "degree": "BA Computer Science",
+      "school": "UC Berkeley",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/steve.jpg",
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "degree": "BA English",
+      "school": "UNLV",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
+      "firstName": "Amanda",
+      "lastName": "Binder",
+      "degree": "BA Film",
+      "school": "New York Film Academy",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
+      "firstName": "Amanda",
+      "lastName": "Binder",
+      "degree": "BA Film",
+      "school": "New York Film Academy",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
+      "firstName": "Amanda",
+      "lastName": "Binder",
+      "degree": "BA Film",
+      "school": "New York Film Academy",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
+      "firstName": "Amanda",
+      "lastName": "Binder",
+      "degree": "BA Film",
+      "school": "New York Film Academy",
+      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
+      "location": "Honolulu, HI",
+      "skillset": "C, Java",
+      "interests": "Artifical Intelligence, Software Engineering",
+      "experience": "Entry Level",
       "owner": "john@foo.com"
     }
   ],
   "defaultCompanyProfiles": [
     {
-      "name": "Strawberry",
+      "name": "Pear",
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "location": "Honolulu, HI",
+      "description": "We are a new company that is selling new technologies such as the pearpod, pearphone, and pearbook pro",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Space Y",
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "location": "Honolulu, HI",
+      "description": "Up and coming startup that is looking to build rockets to pluto. Seeking full stack developers that are proficient in C.",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Pear",
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "location": "Honolulu, HI",
+      "description": "New company",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Pear",
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "location": "Honolulu, HI",
+      "description": "New company",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Pear",
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "location": "Honolulu, HI",
+      "description": "New company",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Pear",
       "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
       "location": "Honolulu, HI",
       "description": "New company",

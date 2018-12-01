@@ -9,7 +9,6 @@ const CompanyProfiles = new Mongo.Collection('CompanyProfiles');
 const CompanyProfileSchema = new SimpleSchema({
   name: String,
   image: String,
-  slogan: String,
   location: String,
   description: String,
   owner: String,

@@ -10,8 +10,8 @@ function addData(data) {
 
 /** Initialize the collection if empty. */
 if (CompanyProfiles.find().count() === 0) {
-  if (Meteor.settings.defaultData) {
-    console.log('Creating default data.');
+  if (Meteor.settings.defaultCompanyProfiles) {
+    console.log('Creating default company profiles.');
     Meteor.settings.defaultCompanyProfiles.map(data => addData(data));
   }
 }

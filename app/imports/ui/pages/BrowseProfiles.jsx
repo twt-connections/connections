@@ -18,7 +18,7 @@ class BrowseProfiles extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">Browse Listings</Header>
+          <Header as="h2" textAlign="center">Browse Profiles</Header>
           <Card.Group>
             {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} studentItem={studentProfile}/>)}
           </Card.Group>

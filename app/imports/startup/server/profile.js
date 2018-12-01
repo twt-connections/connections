@@ -4,14 +4,14 @@ import { StudentProfiles } from '../../api/profiles/profile.js';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
+  console.log(`  Adding: ${data.lastName} (${data.owner})`);
   StudentProfiles.insert(data);
 }
 
 /** Initialize the collection if empty. */
 if (StudentProfiles.find().count() === 0) {
   if (Meteor.settings.defaultStudentProfiles) {
-    console.log('Creating default profiles.');
+    console.log('Creating default student profiles.');
     Meteor.settings.defaultStudentProfiles.map(data => addData(data));
   }
 }

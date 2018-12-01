@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Card } from 'semantic-ui-react';
+import { Image, Card, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -14,13 +14,27 @@ class StudentItem extends React.Component {
               {this.props.studentItem.firstName} {this.props.studentItem.lastName}
             </Card.Header>
             <Card.Meta>
+              {this.props.studentItem.school}<br/>
               {this.props.studentItem.degree}
             </Card.Meta>
             <Card.Description>
-              {this.props.studentItem.school}
+              {this.props.studentItem.description}<br/>
+              <b>Location</b>: {this.props.studentItem.location} <br/>
+              <b>Skillset</b>: {this.props.studentItem.skillset} <br/>
+              <b>Interests</b>: {this.props.studentItem.interests} <br/>
+              <b>Experience</b>: {this.props.studentItem.experience}
               <br />
-              {this.props.studentItem.owner}
             </Card.Description>
+            <Card.Content extra>
+              <div className='ui three buttons'>
+                <Button basic color='green'>
+                  Add to network
+                </Button>
+                <Button basic color='blue'>
+                  Message
+                </Button>
+              </div>
+            </Card.Content>
           </Card.Content>
         </Card>
     );
