@@ -3,25 +3,52 @@
     { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
     { "email": "company@foo.com", "password": "changeme", "role": "company" },
     { "email": "john@foo.com", "password": "changeme" }
-  ],
 
+  ],
   "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+    {
+      "name": "Basket",
+      "quantity": 3,
+      "owner": "john@foo.com",
+      "condition": "excellent"
+    },
+    {
+      "name": "Bicycle",
+      "quantity": 2,
+      "owner": "john@foo.com",
+      "condition": "poor"
+    },
+    {
+      "name": "Banana",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "good"
+    },
+    {
+      "name": "Boogie Board",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "excellent"
+    }
   ],
 
-  "defaultProfiles": [
-    { "firstName": "Willard", "lastName": "Peralta", "universityInfo": "UH Manoa, BS Computer Science", "description": "Hello my name is Willard Peralta. I am looking for a job please. Thank you.", "location": "Honolulu, HI", "skillset": "Java, C++", "interests": "software engineering, web design",
-    "experience": "Entry-level", "owner": "john@foo.com"},
-    { "firstName": "Ty", "lastName": "Gwartney", "universityInfo": "UH Manoa, BS Computer Science", "description": "Hello my name is Ty Gwartney. I am looking for a job please. Thank you.", "location": "Honolulu, HI", "skillset": "Java, C++", "interests": "software engineering, web design",
-      "experience": "Entry-level", "owner": "john@foo.com"},
-    { "firstName": "Tre", "lastName": "Gelacio", "universityInfo": "UH Manoa, BS Computer Science", "description": "Hello my name is Tre Gelacio. I am looking for a job please. Thank you.", "location": "Honolulu, HI", "skillset": "Java, C++", "interests": "software engineering, web design",
-      "experience": "Entry-level", "owner": "admin@foo.com"}
+  "defaultStudentProfiles": [
+    {
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "firstName": "Willard",
+      "lastName": "Peralta",
+      "degree": "BS Computer Science",
+      "school": "UH Manoa",
+      "owner": "john@foo.com"
+    }
   ],
-
   "defaultCompanyProfiles": [
-    { "name": "Strawberry", "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg", "location": "Honolulu, HI", "description": "New company", "owner": "john@foo.com" }
+    {
+      "name": "Strawberry",
+      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "location": "Honolulu, HI",
+      "description": "New company",
+      "owner": "john@foo.com"
+    }
   ]
 }

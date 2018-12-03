@@ -1,36 +1,34 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
-import { Profiles } from '../../api/profiles/profile.js';
+import { StudentProfiles } from '../../api/profiles/profile.js';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
   console.log(`  Adding: ${data.name} (${data.owner})`);
-  Profiles.insert(data);
+  StudentProfiles.insert(data);
 }
 
 /** Initialize the collection if empty. */
-if (Profiles.find().count() === 0) {
-  if (Meteor.settings.defaultProfiles) {
+if (StudentProfiles.find().count() === 0) {
+  if (Meteor.settings.defaultStudentProfiles) {
     console.log('Creating default profiles.');
-    Meteor.settings.defaultProfiles.map(data => addData(data));
+    Meteor.settings.defaultStudentProfiles.map(data => addData(data));
   }
 }
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Profiles', function publish() {
+Meteor.publish('StudentProfiles', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
-    return Profiles.find({ owner: username });
+    return StudentProfiles.find({ owner: username });
   }
   return this.ready();
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('Admin', function publish() {
+Meteor.publish('StudentProfilesAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Profiles.find();
+    return StudentProfiles.find();
   }
   return this.ready();
 });
-
-/** TODO: Create subscription for Companies */

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
-import { Profiles } from '/imports/api/profiles/profile';
+import { StudentProfiles } from '/imports/api/profiles/profile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Profile from '/imports/ui/components/Profile';
@@ -20,10 +20,10 @@ class ListStudentProfile extends React.Component {
         <div className="landing-background-image">
           <Container>
             <Header as="h2" textAlign="center">Student Profile Page</Header>
-              <br/>
-              <Card.Group centered>
-                {this.props.profiles.map((profile) => <Profile key={profile._id} profile={profile} />)}
-              </Card.Group>
+            <br/>
+            <Card.Group centered>
+              {this.props.profiles.map((profile) => <Profile key={profile._id} profile={profile} />)}
+            </Card.Group>
             <br/>
           </Container>
         </div>
@@ -40,9 +40,9 @@ ListStudentProfile.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Profile documents.
-  const subscription = Meteor.subscribe('Profiles');
+  const subscription = Meteor.subscribe('StudentProfiles');
   return {
-    profiles: Profiles.find({}).fetch(),
+    profiles: StudentProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(ListStudentProfile);

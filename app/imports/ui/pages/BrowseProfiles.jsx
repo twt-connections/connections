@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
-import { CompanyProfiles } from '/imports/api/profiles/CompanyProfile';
+import { Container, Card, Header, Loader } from 'semantic-ui-react';
+import { StudentProfiles } from '/imports/api/profiles/profile.js';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import CompanyProfilez from '/imports/ui/components/CompanyProfile';
+import StudentItem from '/imports/ui/components/StudentItem';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class CompanyProfile extends React.Component {
+class BrowseProfiles extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -17,30 +17,27 @@ class CompanyProfile extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <div>
-          <Container>
-            <Card.Group>
-              {this.props.companyprofiles.map((companyprofile) => <CompanyProfilez key={companyprofile._id} companyItem={companyprofile} />)}
-            </Card.Group>
-            <br/>
-          </Container>
-        </div>
+        <Container>
+          <Header as="h2" textAlign="center">Browse Listings</Header>
+          <Card.Group>
+            {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} studentItem={studentProfile}/>)}
+          </Card.Group>
+        </Container>
     );
   }
 }
-
 /** Require an array of Stuff documents in the props. */
-CompanyProfile.propTypes = {
-  companyprofiles: PropTypes.array.isRequired,
+BrowseProfiles.propTypes = {
+  studentProfiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  // Get access to CompanyProfile documents.
-  const subscription = Meteor.subscribe('CompanyProfiles');
+  // Get access to Stuff documents.
+  const subscription = Meteor.subscribe('StudentProfiles');
   return {
-    companyprofiles: CompanyProfiles.find({}).fetch(),
+    studentProfiles: StudentProfiles.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(CompanyProfile);
+})(BrowseProfiles);

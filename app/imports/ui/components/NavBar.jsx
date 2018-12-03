@@ -16,17 +16,14 @@ class NavBar extends React.Component {
             <Header inverted as='h1'>Recruiting Grounds</Header>
           </Menu.Item>
           {this.props.currentUser ? (
-              [<Menu.Item as={NavLink} activeClassName="active" exact to="/studentHome" key='studentHome'>
-                  Student Home
-                </Menu.Item>,
+              [<Menu.Item as={NavLink} activeClassName="active" exact to="/studentHome" key='studentHome'>Student
+                Home</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/companyHome" key='companyHome'>Company
+                  Home</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/browseProfiles" key='browseProfiles'>Browse
+                  Profiles</Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/browseListings" key='browseListings'>
                   Browse Listings
-                </Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/companyHome" key='companyHome'>
-                  Company Home
-                </Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/allStudentProfiles" key='allStudentProfiles'>
-                  Browse Profiles
                 </Menu.Item>]
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
@@ -52,8 +49,8 @@ class NavBar extends React.Component {
                     <Dropdown.Item icon="sign out" text="Company Profile" as={NavLink} exact to="/company"/>
                     <Dropdown.Item icon="sign out" text="Add a Company Profile" as={NavLink} exact to="/addCompanyProfile"/>
                     <Dropdown.Item icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
-                </Dropdown.Menu>
-              </Dropdown>
+                  </Dropdown.Menu>
+                </Dropdown>
             ) : ''}
           </Menu.Item>
         </Menu>

@@ -7,7 +7,7 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import FooterMenu from '../components/FooterMenu';
 import Connections from '../pages/Connections';
-import AllStudentProfiles from '../pages/AllStudentProfiles';
+import BrowseProfiles from '../pages/BrowseProfiles';
 import CompanyHome from '../pages/CompanyHome';
 import CompanyProfile from '../pages/CompanyProfile';
 import EditCompanyProfile from '../pages/EditCompanyProfile';
@@ -22,6 +22,8 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import AdminHome from '../pages/AdminHome';
+import AllStudentProfiles from '../pages/AllStudentProfiles';
+
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -36,6 +38,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/studentHome" component={StudentHome}/>
               <ProtectedRoute path="/companyHome" component={CompanyHome}/>
+              <ProtectedRoute path="/browseProfiles" component={BrowseProfiles}/>
               <ProtectedRoute path="/allStudentProfiles" component={AllStudentProfiles}/>
               <ProtectedRoute path="/browseListings" component={BrowseListings}/>
               <ProtectedRoute path="/addProfile" component={AddProfile}/>
