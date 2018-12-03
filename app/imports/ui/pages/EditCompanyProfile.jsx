@@ -17,8 +17,8 @@ class EditCompanyProfile extends React.Component {
 
   /** On successful submit, insert the data. */
   submit(data) {
-    const { name, image, slogan, location, description, _id } = data;
-    CompanyProfiles.update(_id, { $set: { name, image, slogan, location, description } }, (error) => (error ?
+    const { image, name, location, description, _id } = data;
+    CompanyProfiles.update(_id, { $set: { image, name, location, description } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
@@ -36,9 +36,8 @@ class EditCompanyProfile extends React.Component {
             <Header as="h2" textAlign="center">Edit Company Profile</Header>
             <AutoForm schema={CompanyProfileSchema} onSubmit={this.submit} model={this.props.doc}>
               <Segment>
-                <TextField name='name'/>
                 <TextField name='image'/>
-                <TextField name='slogan'/>
+                <TextField name='name'/>
                 <TextField name='location'/>
                 <LongTextField name='description'/>
                 <SubmitField value='Submit'/>

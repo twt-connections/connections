@@ -32,9 +32,9 @@ class AddCompanyProfile extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { name, image, slogan, location, description } = data;
+    const { image, name, location, description } = data;
     const owner = Meteor.user().username;
-    CompanyProfiles.insert({ name, image, slogan, location, description, owner }, this.insertCallback);
+    CompanyProfiles.insert({ image, name, location, description, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -45,9 +45,8 @@ class AddCompanyProfile extends React.Component {
             <Header as="h2" textAlign="center">Add Your New Company Profile</Header>
             <AutoForm ref={(ref) => { this.formRef = ref; }} schema={CompanyProfileSchema} onSubmit={this.submit}>
               <Segment>
-                <TextField name='name'/>
                 <TextField name='image'/>
-                <TextField name='slogan'/>
+                <TextField name='name'/>
                 <TextField name='location'/>
                 <LongTextField name='description'/>
                 <TextField name='owner' placeholder='Enter your email'/>

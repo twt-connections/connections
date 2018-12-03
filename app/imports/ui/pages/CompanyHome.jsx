@@ -115,7 +115,7 @@ class CompanyHome extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 CompanyHome.propTypes = {
-  profiles: PropTypes.array.isRequired,
+  companyprofiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 

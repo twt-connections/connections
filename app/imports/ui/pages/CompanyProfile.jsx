@@ -4,7 +4,7 @@ import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { CompanyProfiles } from '/imports/api/profiles/CompanyProfile';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import CompanyItem from '/imports/ui/components/CompanyItem';
+import CompanyProfilez from '/imports/ui/components/CompanyProfile';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class CompanyProfile extends React.Component {
@@ -17,12 +17,11 @@ class CompanyProfile extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <div className="landing-background-image">
+        <div>
           <Container>
-            <Header as="h2" textAlign="center">Company Profile Page</Header>
-              <Card.Group>
-                {this.props.companyprofiles.map((companyprofile) => <CompanyItem key={companyprofile._id} companyprofile={companyprofile} />)}
-              </Card.Group>
+            <Card.Group>
+              {this.props.companyprofiles.map((companyprofile) => <CompanyProfilez key={companyprofile._id} companyItem={companyprofile} />)}
+            </Card.Group>
             <br/>
           </Container>
         </div>
