@@ -1,9 +1,8 @@
 import React from 'react';
-import { Profiles, ProfileSchema } from '/imports/api/profiles/profile';
+import { StudentProfiles, StudentProfileSchema } from '/imports/api/profiles/profile';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
-import LongTextField from 'uniforms-semantic/LongTextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
 import { Bert } from 'meteor/themeteorchef:bert';
@@ -32,11 +31,9 @@ class AddProfile extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { firstName, lastName, image, universityInfo,
-      description, location, skillset, interests, experience } = data;
+    const { image, firstName, lastName, degree, school } = data;
     const owner = Meteor.user().username;
-    Profiles.insert({ firstName, lastName, image, universityInfo,
-      description, location, skillset, interests, experience, owner }, this.insertCallback);
+    StudentProfiles.insert({ image, firstName, lastName, degree, school, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -45,17 +42,13 @@ class AddProfile extends React.Component {
         <Grid container centered>
           <Grid.Column>
             <Header as="h2" textAlign="center">Add Your New Profile</Header>
-            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={ProfileSchema} onSubmit={this.submit}>
+            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={StudentProfileSchema} onSubmit={this.submit}>
               <Segment>
+                <TextField name='image' placeholder='Enter the url to your image'/>
                 <TextField name='firstName' placeholder='Enter your first name'/>
                 <TextField name='lastName' placeholder='Enter your last name'/>
-                <TextField name='image' placeholder='Enter the url to your image'/>
-                <TextField name='universityInfo' placeholder='Enter the university you attend(ed)'/>
-                <LongTextField name='description' placeholder='Describe yourself'/>
-                <TextField name='location' placeholder='Enter your Location'/>
-                <TextField name='skillset' placeholder='Enter your Skillsets'/>
-                <TextField name='interests' placeholder='Enter your Interests'/>
-                <TextField name='experience' placeholder='Enter your Experience'/>
+                <TextField name='degree' placeholder='Enter your latest degree accomplished'/>
+                <TextField name='school' placeholder='Enter the school youre attending'/>
                 <TextField name='owner' placeholder='Enter your email'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>

@@ -16,32 +16,14 @@ class Profile extends React.Component {
                 {this.props.profile.firstName} {this.props.profile.lastName}
               </Card.Header>
               <Card.Description>
-                {this.props.profile.universityInfo}
-              </Card.Description>
-              <Card.Description>
-                {this.props.profile.location}
+                {this.props.profile.degree}
               </Card.Description>
             </Card.Content>
           </Card>
-
           <Card>
             <Card.Content>
               <Card.Description>
-                {this.props.profile.description}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-
-          <Card>
-            <Card.Content>
-              <Card.Description>
-                {this.props.profile.skillset}
-              </Card.Description>
-              <Card.Description>
-                {this.props.profile.interests}
-              </Card.Description>
-              <Card.Description>
-                {this.props.profile.experience}
+                {this.props.profile.school}
               </Card.Description>
             </Card.Content>
             <Card.Content extra>

@@ -4,7 +4,6 @@ import { StudentProfiles, StudentProfileSchema } from '/imports/api/profiles/pro
 import { Bert } from 'meteor/themeteorchef:bert';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
-import LongTextField from 'uniforms-semantic/LongTextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -17,10 +16,8 @@ class EditStudentProfile extends React.Component {
 
   /** On successful submit, insert the data. */
   submit(data) {
-    const { firstName, lastName, image, universityInfo, description, location,
-      skillset, interests, experience, _id } = data;
-    StudentProfiles.update(_id, { $set: { firstName, lastName, image, universityInfo,
-        description, location, skillset, interests, experience } }, (error) => (error ?
+    const { image, firstName, lastName, degree, school, _id } = data;
+    StudentProfiles.update(_id, { $set: { image, firstName, lastName, degree, school } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
@@ -38,15 +35,11 @@ class EditStudentProfile extends React.Component {
             <Header as="h2" textAlign="center">Edit Student Profile</Header>
             <AutoForm schema={StudentProfileSchema} onSubmit={this.submit} model={this.props.doc}>
               <Segment>
+                <TextField name='image'/>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
-                <TextField name='image'/>
-                <TextField name='universityInfo'/>
-                <LongTextField name='description'/>
-                <TextField name='location'/>
-                <TextField name='skillset'/>
-                <TextField name='interests'/>
-                <LongTextField name='experience'/>
+                <TextField name='degree'/>
+                <TextField name='school'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' />
@@ -70,7 +63,7 @@ export default withTracker(({ match }) => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const documentId = match.params._id;
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Profiles');
+  const subscription = Meteor.subscribe('StudentProfiles');
   return {
     doc: StudentProfiles.findOne(documentId),
     ready: subscription.ready(),

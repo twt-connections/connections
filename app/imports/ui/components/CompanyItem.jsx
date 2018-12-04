@@ -18,9 +18,6 @@ class CompanyItem extends React.Component {
               {this.props.companyItem.location}
             </Card.Meta>
             <Card.Description>
-              {this.props.companyItem.slogan}
-            </Card.Description>
-            <Card.Description>
               {this.props.companyItem.description}
             </Card.Description>
             <Card.Content extra>
