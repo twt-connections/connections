@@ -35,12 +35,9 @@ class CompanyHome extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui three buttons'>
-                    <Button basic color='green'>
-                      Request Info
-                    </Button>
+                  <div className='ui two buttons'>
                     <Button basic color='blue'>
-                      Contact
+                      Message
                     </Button>
                     <Button basic color='red'>
                       Remove
@@ -63,12 +60,9 @@ class CompanyHome extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui three buttons'>
-                    <Button basic color='green'>
-                      Request Info
-                    </Button>
+                  <div className='ui two buttons'>
                     <Button basic color='blue'>
-                      Contact
+                      Message
                     </Button>
                     <Button basic color='red'>
                       Remove
@@ -92,12 +86,9 @@ class CompanyHome extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui three buttons'>
-                    <Button basic color='green'>
-                      Request Info
-                    </Button>
+                  <div className='ui two buttons'>
                     <Button basic color='blue'>
-                      Contact
+                      Message
                     </Button>
                     <Button basic color='red'>
                       Remove

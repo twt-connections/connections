@@ -17,16 +17,8 @@ class StudentItem extends React.Component {
               {this.props.studentItem.school}<br/>
               {this.props.studentItem.degree}
             </Card.Meta>
-            <Card.Description>
-              {this.props.studentItem.description}<br/>
-              <b>Location</b>: {this.props.studentItem.location} <br/>
-              <b>Skillset</b>: {this.props.studentItem.skillset} <br/>
-              <b>Interests</b>: {this.props.studentItem.interests} <br/>
-              <b>Experience</b>: {this.props.studentItem.experience}
-              <br />
-            </Card.Description>
             <Card.Content extra>
-              <div className='ui three buttons'>
+              <div className='ui two small buttons'>
                 <Button basic color='green'>
                   Add to network
                 </Button>

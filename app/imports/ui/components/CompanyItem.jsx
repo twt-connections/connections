@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Button, Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -21,7 +21,14 @@ class CompanyItem extends React.Component {
               {this.props.companyItem.description}
             </Card.Description>
             <Card.Content extra>
-              <Link to={`/editCompanyProfile/${this.props.companyItem._id}`}>Click to Edit</Link>
+              <div className='ui two small buttons'>
+                <Button basic color='green'>
+                  Add to network
+                </Button>
+                <Button basic color='blue'>
+                  Message
+                </Button>
+              </div>
             </Card.Content>
           </Card.Content>
         </Card>

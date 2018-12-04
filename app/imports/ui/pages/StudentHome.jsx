@@ -35,12 +35,9 @@ class StudentHome extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui three buttons'>
-                    <Button basic color='green'>
-                      Request Info
-                    </Button>
+                  <div className='ui two buttons'>
                     <Button basic color='blue'>
-                      Contact
+                      Message
                     </Button>
                     <Button basic color='red'>
                       Remove
@@ -62,40 +59,9 @@ class StudentHome extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui three buttons'>
-                    <Button basic color='green'>
-                      Request Info
-                    </Button>
+                  <div className='ui two buttons'>
                     <Button basic color='blue'>
-                      Contact
-                    </Button>
-                    <Button basic color='red'>
-                      Remove
-                    </Button>
-                  </div>
-                </Card.Content>
-              </Card>
-              <Card>
-                <Card.Content>
-                  <Image floated='right' size='mini'
-                         src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg'/>
-                  <Card.Header>Sedward Eoden</Card.Header>
-                  <Card.Meta>Rolling Inc.</Card.Meta>
-                  <Card.Description>
-                    Seeking junior level developer. <br/>
-                    <b>Location</b>: Palo Alto, CA <br/>
-                    <b>Required Skills</b>: Alice3 <br/>
-                    <b>Desirable Skills</b>: Java <br/>
-                    <b>Experience</b>: Summer Internship
-                  </Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                  <div className='ui three buttons'>
-                    <Button basic color='green'>
-                      Request Info
-                    </Button>
-                    <Button basic color='blue'>
-                      Contact
+                      Message
                     </Button>
                     <Button basic color='red'>
                       Remove

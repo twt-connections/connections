@@ -12,11 +12,6 @@ const StudentProfileSchema = new SimpleSchema({
   lastName: String,
   degree: String,
   school: String,
-  description: String,
-  location: String,
-  skillset: String,
-  interests: String,
-  experience: String,
   owner: String,
 }, { tracker: Tracker });
 

@@ -1,11 +1,20 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "company@foo.com", "password": "changeme", "role": "company" },
-    { "email": "john@foo.com", "password": "changeme" }
-
+    {
+      "email": "admin@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "company@foo.com",
+      "password": "changeme",
+      "role": "company"
+    },
+    {
+      "email": "john@foo.com",
+      "password": "changeme"
+    }
   ],
-
   "defaultStudentProfiles": [
     {
       "image": "https://react.semantic-ui.com/images/avatar/large/steve.jpg",
@@ -13,11 +22,6 @@
       "lastName": "Peralta",
       "school": "UH Manoa",
       "degree": "BS Computer Science",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
       "owner": "john@foo.com"
     },
     {
@@ -26,11 +30,6 @@
       "lastName": "Gwartney",
       "degree": "BS Computer Science",
       "school": "UH Manoa",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
       "owner": "john@foo.com"
     },
     {
@@ -39,11 +38,6 @@
       "lastName": "Gelacio",
       "degree": "BS Computer Science",
       "school": "UH Manoa",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
       "owner": "john@foo.com"
     },
     {
@@ -52,11 +46,6 @@
       "lastName": "Notgates",
       "degree": "BA Computer Science",
       "school": "UC Berkeley",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
       "owner": "john@foo.com"
     },
     {
@@ -65,11 +54,6 @@
       "lastName": "Kowalski",
       "degree": "BA English",
       "school": "UNLV",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
       "owner": "john@foo.com"
     },
     {
@@ -78,94 +62,116 @@
       "lastName": "Binder",
       "degree": "BA Film",
       "school": "New York Film Academy",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/elliot.jpg",
+      "firstName": "Henry",
+      "lastName": "Ford",
+      "degree": "BA Business",
+      "school": "Harvard University",
+      "owner": "john@foo.com"
+    },
+    {
+      "image": "https://react.semantic-ui.com/images/avatar/large/elliot.jpg",
+      "firstName": "Michael",
+      "lastName": "Andrews",
+      "degree": "BA Art",
+      "school": "New York Film Academy",
       "owner": "john@foo.com"
     },
     {
       "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
-      "firstName": "Amanda",
-      "lastName": "Binder",
-      "degree": "BA Film",
-      "school": "New York Film Academy",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
-      "owner": "john@foo.com"
-    },
-    {
-      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
-      "firstName": "Amanda",
-      "lastName": "Binder",
-      "degree": "BA Film",
-      "school": "New York Film Academy",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
-      "owner": "john@foo.com"
-    },
-    {
-      "image": "https://react.semantic-ui.com/images/avatar/large/veronika.jpg",
-      "firstName": "Amanda",
-      "lastName": "Binder",
-      "degree": "BA Film",
-      "school": "New York Film Academy",
-      "description": "Hello. I am a student. I am very poor. Please I need a job I'm starving. Thank you.",
-      "location": "Honolulu, HI",
-      "skillset": "C, Java",
-      "interests": "Artifical Intelligence, Software Engineering",
-      "experience": "Entry Level",
+      "firstName": "Ana",
+      "lastName": "Kooley",
+      "degree": "BS Computer Science",
+      "school": "UH Hilo",
       "owner": "john@foo.com"
     }
   ],
   "defaultCompanyProfiles": [
     {
       "name": "Pear",
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "image": "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/19010334/fc76is016-01-thumb1x1.jpg",
       "location": "Honolulu, HI",
-      "description": "We are a new company that is selling new technologies such as the pearpod, pearphone, and pearbook pro",
+      "description": "We are a new company that is selling the new technologies such as the new pearpod, pearphones, and the new pearbook pro",
       "owner": "john@foo.com"
     },
     {
       "name": "Space Y",
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "image": "https://previews.123rf.com/images/chekman/chekman1709/chekman170900024/86147938-colored-rocket-ship-icon-in-flat-design-simple-spaceship-icon-isolated-on-white-background-vector-il.jpg",
       "location": "Honolulu, HI",
-      "description": "Up and coming startup that is looking to build rockets to pluto. Seeking full stack developers that are proficient in C.",
+      "description": "Focused on getting humanity to Pluto, we are using new data mining and machine learning techniques to create new technologies that will do so.",
       "owner": "john@foo.com"
     },
     {
-      "name": "Pear",
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "name": "Pamsung",
+      "image": "https://thegreatergroup.com/wp-content/uploads/samsung-logo.jpeg",
       "location": "Honolulu, HI",
-      "description": "New company",
+      "description": "Focused on creating fast nanochips for video graphics cards.",
       "owner": "john@foo.com"
     },
     {
-      "name": "Pear",
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "name": "ybox 720",
+      "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1530489880-sony-ps4-slim-1530489837.jpg",
       "location": "Honolulu, HI",
-      "description": "New company",
+      "description": "Creating the next gen console the ybox 720. Interested in seeking students proficient in C++.",
       "owner": "john@foo.com"
     },
     {
-      "name": "Pear",
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "name": "Cloud",
+      "image": "https://cdn.vox-cdn.com/thumbor/C1SdoDActSv8tPONx_OjwEobUjw=/0x0:1004x753/1200x800/filters:focal(0x0:1004x753)/cdn.vox-cdn.com/uploads/chorus_image/image/49523369/20150428-cloud-computing.0.jpg",
       "location": "Honolulu, HI",
-      "description": "New company",
+      "description": "We are a new company that is focused on creating a new hub to buy and sell pc games",
       "owner": "john@foo.com"
     },
     {
-      "name": "Pear",
-      "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295_1280.jpg",
+      "name": "White Mirror",
+      "image": "https://cb2.scene7.com/is/image/CB2/AcaciaWoodMirrorRndLrgSHF16/?$web_product_hero$&161121090033&wid=625&hei=625",
       "location": "Honolulu, HI",
-      "description": "New company",
+      "description": "Using the latest brain chip technology, we are a research and development team that is interested in finding the most efficient uses of the technology.",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Dotify",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51rttY7a%2B9L._SY355_.png",
+      "location": "Honolulu, HI",
+      "description": "Creating a better listening experience for users, Dotify allows you to customize your playlist by not only adding new songs to playlists, but you can also make your own remixes combining multiple songs.",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Spamdora",
+      "image": "https://cdn.vox-cdn.com/thumbor/s_pbOEhgqmVrs3ADweXq_d4Q31A=/0x0:1600x1066/1400x1400/filters:focal(668x370:924x626):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/54899887/pandora_paypal_logo_battle.0.jpg",
+      "location": "Honolulu, HI",
+      "description": "Here at Spamdora, we like to focus on the listening experience of the user, so every 1 minute or so we like to spam you with radio ads. We are looking for students that can come up with efficient ways to spam users.",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "HMail",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Gmail_Icon.svg/2000px-Gmail_Icon.svg.png",
+      "location": "Honolulu, HI",
+      "description": "We're like Gmail but better.",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Bwitter",
+      "image": "https://image.freepik.com/free-icon/twitter-logo_318-40459.jpg",
+      "location": "Honolulu, HI",
+      "description": "We are similar to Twitter but instead of tweeting nice and or funny things, you tweet out bitter things.",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Legbook",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/1024px-F_icon.svg.png",
+      "location": "Honolulu, HI",
+      "description": "We're like facebook but better than facebook",
+      "owner": "john@foo.com"
+    },
+    {
+      "name": "Yourspace",
+      "image": "https://img.freepik.com/free-icon/user-filled-person-shape_318-74922.jpg?size=338c&ext=jpg",
+      "location": "Honolulu, HI",
+      "description": "Like myspace but better, but not as good as legbook",
       "owner": "john@foo.com"
     }
   ]
