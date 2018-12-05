@@ -51,9 +51,9 @@ class StudentHome extends React.Component {
                   <Card.Header>Gelinda Mates</Card.Header>
                   <Card.Meta>Hilltop Systems</Card.Meta>
                   <Card.Description>
-                    Seeking full time, full stack developer with at least 20 years experience. <br/>
+                    Seeking full time, full stack developer with at least 20 years experience.  <br/>
                     <b>Location</b>: Spokane, WA <br/>
-                    <b>Required Skills</b>: Java, C++, Python, Wordpress <br/>
+                    <b>Required Skills</b>: Java, C++, Python, Wordpress, React<br/>
                     <b>Desirable Skills</b>: Everything <br/>
                     <b>Experience</b>: 20+ Years
                   </Card.Description>
