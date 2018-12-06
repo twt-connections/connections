@@ -22,6 +22,12 @@
   height: 600px;
 }
 
+.aerial-view-image {
+  background: url('https://pixabay.com/get/ec3db00e28f61c22d9584518a33219c8b66ae3d01db5114894f4c47c/waikiki-beach-581102_1920.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 600px;
+}
+
 .landing-column-left {
   margin-top: 100px;
 }

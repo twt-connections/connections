@@ -18,7 +18,7 @@ class CompanyHome extends React.Component {
     return (
         <div className="landing-background-image">
           <Container>
-            <Header as="h2" textAlign="center">Your Connections</Header>
+            <Header as="h2" textAlign="center">Recruitees</Header>
             <Card.Group centered>
               <Card>
                 <Card.Content>

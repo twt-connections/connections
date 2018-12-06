@@ -17,13 +17,16 @@ class BrowseListings extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
+        <div className="aerial-view-image">
         <Container>
-          <Header as="h2" textAlign="center">Browse Listings</Header>
-          <Card.Group>
-            {this.props.companyProfiles.map((companyProfile, index) => <CompanyItem key={index} companyItem={companyProfile} />)}
-          </Card.Group>
-          <br/>
+            <Header as="h2" textAlign="center" inverted>Browse Listings</Header>
+            <Card.Group>
+              {this.props.companyProfiles.map((companyProfile, index) => <CompanyItem key={index}
+                                                                                      companyItem={companyProfile}/>)}
+            </Card.Group>
+            <br/>
         </Container>
+        </div>
     );
   }
 }

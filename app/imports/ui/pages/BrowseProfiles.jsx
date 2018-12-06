@@ -6,7 +6,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import StudentItem from '/imports/ui/components/StudentItem';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders a table containing all of the StudentProfiles documents. Use <StudentItem> to render each row. */
 class BrowseProfiles extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
@@ -17,18 +17,21 @@ class BrowseProfiles extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container>
-          <Header as="h2" textAlign="center">Browse Profiles</Header>
-          <Card.Group>
-            {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} studentItem={studentProfile}/>)}
-          </Card.Group>
-          <br/>
-        </Container>
+        <div className="aerial-view-image">
+          <Container>
+            <Header as="h2" textAlign="center" inverted>Browse Profiles</Header>
+            <Card.Group>
+              {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index}
+                                                                                      studentItem={studentProfile}/>)}
+            </Card.Group>
+            <br/>
+          </Container>
+        </div>
     );
   }
 }
 
-/** Require an array of Stuff documents in the props. */
+/** Require an array of StudentProfiles documents in the props. */
 BrowseProfiles.propTypes = {
   studentProfiles: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
