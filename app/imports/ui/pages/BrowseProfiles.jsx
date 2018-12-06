@@ -22,6 +22,7 @@ class BrowseProfiles extends React.Component {
           <Card.Group>
             {this.props.studentProfiles.map((studentProfile, index) => <StudentItem key={index} studentItem={studentProfile}/>)}
           </Card.Group>
+          <br/>
         </Container>
     );
   }

@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 class StudentItem extends React.Component {
   render() {
     return (
-        <Card>
+        <Card centered>
           <Card.Content>
             <Image floated='right' size='mini' src={this.props.studentItem.image} />
             <Card.Header>

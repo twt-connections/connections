@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Container, Header, Button, Segment, Grid } from 'semantic-ui-react';
+import { Image, Container, Header, Button, Segment, Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -36,16 +36,16 @@ class CompanyProfile extends React.Component {
               <Grid.Row>
                 <Grid.Column width={8}>
                   <Header as='h2' style={{ fontSize: '2em' }}>
-                    All about doc (list)
+                    All about us
                   </Header>
                   <p style={{ fontSize: '1.33em' }}>
-                    We are good company.
+                    We are a good company.
                   </p>
                   <Header as='h2' style={{ fontSize: '2em' }}>
-                    What we are looking for
+                    You are what we are looking for.
                   </Header>
                   <p style={{ fontSize: '1.33em' }}>
-                    Something something we need to hire some people so just send us your resume and we'll hire you.
+                    High starting salary.
                   </p>
                 </Grid.Column>
 
@@ -62,13 +62,12 @@ class CompanyProfile extends React.Component {
             </Grid>
           </Segment>
 
-
           <Segment style={{ padding: '0em' }} vertical>
             <Grid celled='internally' columns='equal' stackable>
               <Grid.Row textAlign='center'>
                 <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                   <Header as='h3' style={{ fontSize: '2m' }}>
-                    Available positions doc (use a list)
+                    Available positions
                   </Header>
                   <p style={{ fontSize: '1.33em' }}>
                     Front-End Developers
@@ -79,26 +78,23 @@ class CompanyProfile extends React.Component {
                     <Button size='small' floated='right'>Click for Specifications</Button>
                   </p>
                   <p style={{ fontSize: '1.33em' }}>
-                    Just need more devs honestly
+                    Front-Desk Clerks
                     <Button size='small' floated='right'>Click for specifications</Button>
                   </p>
                 </Grid.Column>
 
                 <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                   <Header as='h3' style={{ fontSize: '2m' }}>
-                    Positives to company doc (use a list)
+                    Positives to company
                   </Header>
                   <p style={{ fontSize: '1.25em' }}>
                     Internships
                   </p>
                   <p style={{ fontSize: '1.25em' }}>
-                    Jobs (obviously)
+                    Jobs
                   </p>
                   <p style={{ fontSize: '1.25em' }}>
                     Free food
-                  </p>
-                  <p style={{ fontSize: '1.25em' }}>
-                    things
                   </p>
                 </Grid.Column>
               </Grid.Row>
@@ -110,31 +106,31 @@ class CompanyProfile extends React.Component {
               <Grid.Row textAlign='center'>
                 <Grid.Column style={{ paddingBottom: '2.5em', paddingTop: '2.5em' }}>
                   <Header as='h3' style={{ fontSize: '2m' }}>
-                    Links doc (use list)
+                    Links
                   </Header>
                   <p style={{ fontSize: '1em' }}>
-                    <a src="www.sanger.dk">click here for our website</a>
+                    <a href="www.sanger.dk">click here for our website</a>
                   </p>
                   <p style={{ fontSize: '1em' }}>
-                    <a src="www.sanger.dk">click here for money</a>
+                    <a href="www.sanger.dk">click here to contact us</a>
                   </p>
                   <p style={{ fontSize: '1em' }}>
-                    <a src="www.sanger.dk">click here if you want good grades</a>
+                    <a href="www.sanger.dk">click here for more information</a>
                   </p>
                 </Grid.Column>
 
                 <Grid.Column style={{ paddingBottom: '2.5em', paddingTop: '2.5em' }}>
                   <Header as='h3' style={{ fontSize: '2m' }}>
-                    contact emails doc (use list)
+                    Contact Emails
                   </Header>
                   <p style={{ fontSize: '1em' }}>
-                    <a src="www.sanger.dk">ceo@companyname.com</a>
+                    <a href="www.sanger.dk">ceo@companyname.com</a>
                   </p>
                   <p style={{ fontSize: '1em' }}>
-                    <a src="www.sanger.dk">regionalmanager@companyname.com</a>
+                    <a href="www.sanger.dk">regionalmanager@companyname.com</a>
                   </p>
                   <p style={{ fontSize: '1em' }}>
-                    <a src="www.sanger.dk">assistanttotheregionalmanager@companyname.com</a>
+                    <a href="www.sanger.dk">assistanttotheregionalmanager@companyname.com</a>
                   </p>
                 </Grid.Column>
               </Grid.Row>

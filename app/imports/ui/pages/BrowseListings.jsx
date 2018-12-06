@@ -22,6 +22,7 @@ class BrowseListings extends React.Component {
           <Card.Group>
             {this.props.companyProfiles.map((companyProfile, index) => <CompanyItem key={index} companyItem={companyProfile} />)}
           </Card.Group>
+          <br/>
         </Container>
     );
   }

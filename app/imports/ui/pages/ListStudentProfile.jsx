@@ -17,11 +17,9 @@ class ListStudentProfile extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <div className="landing-background-image">
+        <div>
           <Container>
-            <Header as="h2" textAlign="center">Student Profile Page</Header>
-            <br/>
-            <Card.Group centered>
+            <Card.Group>
               {this.props.profiles.map((profile) => <Profile key={profile._id} profile={profile} />)}
             </Card.Group>
             <br/>
